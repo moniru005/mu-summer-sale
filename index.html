@@ -7,13 +7,34 @@
     <!-- Daisyui and Tailwindcss -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        
+    <header class="mx-auto">
+        <!-- Banner Container-->
+        <div class="flex items-center border justify-evenly px-14 gap-6 bg-[#F9F6E2]">
+            <!-- Banner Content -->
+            <div class="text-center space-y-3">
+                <h4 class="text-sm">---SALE FEVER---</h4>
+                <h2 class="text-3xl font-extrabold">Purchase TK 200 or 
+                    <br> above & get <span class="text-[#E527B2]">20% off</span></h2>
+                <p class="flex items-center gap-2 justify-center pb-2">
+                    <span class="text-xs font-semibold">Use Promo Code</span>
+                    <button class="btn btn-sm rounded-md bg-[#E527B2] text-white">SELL200</button>
+                </p>
+            </div>
+            <!-- Banner Image -->
+            <img class="w-[500px]" src="images/Summer 1.png" alt="">
+        </div>
     </header>
-    <main>
-
-    </main>
+    
 </body>
 </html>
