@@ -1,20 +1,6 @@
 
-//For Coupon Apply button Active/Inactive
-document.getElementById('coupon-text').addEventListener('keyup', function (event){
-    const couponText = event.target.value;
-    const couponButton = document.getElementById('btn-coupon');
-    if(couponText == 'SELL200'){
-        couponButton.removeAttribute('disabled');
-    }
-    else{
-        couponButton.setAttribute('disabled', true);
-    }
-    return couponText;
-   })
-
-
-
 // Calculate Cart Item and Price
+
 let total = 0;
 function btnHandleClick(target){
 
@@ -34,7 +20,15 @@ function btnHandleClick(target){
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText = total;
     const grandTotal = document.getElementById('grand-total').innerText = total;
-    
+
+    //For Coupon Apply button enable/disable
+    if(total >= 200){
+        document.getElementById('btn-coupon').disabled = false;
+    }
+    else{
+        document.getElementById('btn-coupon').disabled = true;
+    }
+
     //Purchase Button enable/disable
     if(grandTotal > 0){
         document.getElementById('btn-purchase').disabled = false;
@@ -50,7 +44,7 @@ function btnHandleClick(target){
         couponText.value = '';
         if (applyCoupon === 'SELL200'){
             const discountPercent = 20;
-            if(total >=200){
+            if(total >= 200){
                 const totalDiscount = (total * discountPercent) / 100;
                 document.getElementById('discount-total').innerText = totalDiscount;
                 document.getElementById('grand-total').innerText = total - totalDiscount;
@@ -62,5 +56,3 @@ function btnHandleClick(target){
     })
     return total;
 }
-
-
