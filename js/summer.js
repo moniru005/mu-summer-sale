@@ -13,6 +13,7 @@ document.getElementById('coupon-text').addEventListener('keyup', function (event
    })
 
 
+
 // Calculate Cart Item and Price
 let total = 0;
 function btnHandleClick(target){
@@ -32,7 +33,15 @@ function btnHandleClick(target){
     const price = target.childNodes[3].childNodes[5].innerText.split(" ")[0];
     total = parseInt(total) + parseInt(price);
     document.getElementById('total-price').innerText = total;
-    document.getElementById('grand-total').innerText = total;
+    const grandTotal = document.getElementById('grand-total').innerText = total;
+    
+    //Purchase Button enable/disable
+    if(grandTotal > 0){
+        document.getElementById('btn-purchase').disabled = false;
+    }
+    else{
+        document.getElementById('btn-purchase').disabled = true;
+    }
 
     //Calculate Discount
     document.getElementById('btn-coupon').addEventListener('click', function (){
@@ -47,7 +56,7 @@ function btnHandleClick(target){
                 document.getElementById('grand-total').innerText = total - totalDiscount;
             }
             else{
-                alert('buy above 200tk');
+                alert('You need to buy above 200tk for get discount');
             }  
         }
     })

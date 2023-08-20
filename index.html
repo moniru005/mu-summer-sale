@@ -24,7 +24,7 @@
             <!-- Banner Content -->
             <div class="text-center space-y-3 mt-4">
                 <h4 class="text-base font-medium">---SALE FEVER---</h4>
-                <h2 class="text-5xl font-extrabold">Purchase TK 200 or 
+                <h2 class="text-3xl md:text-5xl lg:text-5xl font-extrabold">Purchase TK 200 or 
                     <br> above & get <span class="text-[#E527B2]">20% off</span></h2>
                 <p class="flex items-center gap-2 justify-center pt-8">
                     <span class="text-base font-medium">Use Promo Code</span>
@@ -259,7 +259,23 @@
                         </table>
                     </div>
                     <hr class="pb-2">
-                    <button id="" class="btn btn-secondary capitalize">Make Purchase</button>
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button id="btn-purchase" disabled onclick="my_modal_5.showModal()" class="btn btn-secondary capitalize text-white" >Make Purchase</button>
+                    <dialog id="my_modal_5" class="modal modal-middle sm:modal-middle">
+                        <form method="dialog" class="bg-white w-9/12/12 md:w-2/4 lg:w-4/12 rounded-lg p-10">
+                            <div class="flex justify-center pb-6">
+                                <img class="w-[120px]" src="images/congo.png" alt="">
+                            </div>
+                          <h3 class="font-semibold text-4xl text-center">Congratulations</h3>
+                          <p class="py-4 text-center text-base pb-10">Your Purchase the product</p>
+                          <div class="flex justify-center">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button onclick="location.replace('http://127.0.0.1:5500/')" class="btn btn-secondary text-white">
+                               Go Home
+                            </button>
+                          </div>
+                        </form>
+                      </dialog>
                 </div>
             </div>
         </section>
