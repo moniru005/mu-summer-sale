@@ -56,7 +56,7 @@ function btnHandleClick(target){
                 document.getElementById('grand-total').innerText = total - totalDiscount;
             }
             else{
-                alert('You need to buy above 200tk for get discount');
+                alert('You need to buy above 200tk for get 20% discount');
             }  
         }
     })
